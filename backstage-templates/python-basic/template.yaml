@@ -23,16 +23,16 @@ spec:
       name: Fetch Template
       action: fetch:plain
       input:
-        url: https://github.com/your-org/backstage-templates/python-basic-template.git
+        url: https://github.com/sh1ntar0/backstage-templates/python-basic-template.git
     - id: publish
       name: Publish to GitHub
       action: publish:github
       input:
-        repoUrl: github.com/your-org/{{ parameters.name }}
+        repoUrl: github.com/sh1ntar0/{{ parameters.name }}
         description: A simple Python project
         defaultBranch: main
     - id: register
       name: Register in Backstage
       action: catalog:register
       input:
-        catalogInfoUrl: https://github.com/your-org/{{ parameters.name }}/blob/main/catalog-info.yaml
+        catalogInfoUrl: https://github.com/sh1ntar0/{{ parameters.name }}/blob/main/catalog-info.yaml
